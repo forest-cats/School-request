@@ -1,5 +1,32 @@
 @charset "UTF-8";
 
+$basecolor: #727171;
+
 body {
-    background-color: #727171;
+    background-color: $basecolor;
+    color: darken($basecolor,30%);
 }
+
+// アコーディオン
+#accordion {
+    border: 1px lighten($basecolor,30%) solid;
+    border-top: none;
+    width: 100%;
+    dt {
+        background: darken($basecolor, 20%);
+        padding: 10px;
+        border-top: 1px #ccc solid;
+        text-align: center;
+        a {
+            color: lighten($basecolor,30%);
+            text-decoration: none;
+            display: block;
+        }
+    }
+    dd {
+        background-color: lighten($basecolor,30%);
+        padding: 10px;
+    }
+}
+
+// アコーディオン終了

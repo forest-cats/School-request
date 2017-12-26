@@ -1,19 +1,128 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
-    <title>Mejose home00</title>
+    <title>Mejose</title>
+    <!-- スマホ対応の場合(start) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- スマホ対応の場合ここまで(end) -->
+    <meta name="discription" content="洋服,衣装,オーダーメイド,リメイク,お直し,コーディネート,舞台,縫製,パターン,丁寧,体にフィット">
     <!-- BootStrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <!-- Costom fonts -->
+    <!-- favicon -->
+    <!-- <link rel="icon" type="image/png" href="images/favicon.png"> -->
     <!-- custom CSS -->
-    <link rel="stylesheet" href="stylesheets/style.scss">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- js -->
+    <script>
+    $(function() {
+        $('#accordion dd').hide();
+        $('#accordion dt a').click(function() {
+            $('#accordion dd').slideUp();
+            $(this).parent().next().slideDown();
+            return false;
+        });
+    });
+    </script>
 </head>
+
 <body>
-    <h1>aaaa</h1>
+    <header>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <!-- モバイル対応(start) -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="glyphicon glyphicon-th-list"></span>
+                    </button>
+                    <!-- モバイル対応ここまで(end) -->
+                    <a class="navbar-brand" href="#">Brand</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li class="active"><a href="#">洋服のオーダーメイド<span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">洋服・衣装のリメイク</a></li>
+                        <li><a href="#">衣装のコーディネイト</a></li>
+                        <li><a href="#">Mijose物語</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Mail</a></li>
+                        <li><a href="#">大・小</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </header>
+    <main>
+        <main>
+            <!-- アコーディオン内(開始) -->
+            <dl id="accordion">
+                <dt><a href="#"><h2>洋服のオーダーメイド</h2></a></dt>
+                <dd>
+                    <p>先ずは、対面にてご要望をお伺いします。</p>
+                    <p>作りたいアイテムに必要な採寸をさせて頂き、デザイン画を起こします。</p>
+                    <p>デザイン決定後、生地見本を確認していただき仮縫いをします。</p>
+                    <p>仮縫い調整後、本縫い、微調整、納品となります。</p>
+                    <p>工程を重ねることによって、身体にフィットしたオリジナルの洋服が誕生します。</p>
+                </dd>
+                <dt><a href="#"><h2>洋服・衣装のリメイク</h2></a></dt>
+                <dd>
+                    <p>同じく、対面にてご要望をお伺いします。</p>
+                    <p>変更したいアイテムに必要な採寸をさせて頂き、用途に合わせたリメイクをご提案させて頂きます。</p>
+                    <p>サイズ変更もバランスを考えて、着る人の個性を活かしたいと考えています。</p>
+                    <p>衣装リメイクは、デザイン要素含むアイデアで、新たなものに生まれ変わらせます。</p>
+                </dd>
+                <dt><a href="#"><h2>衣装のコーディネイト</h2></a></dt>
+                <dd>
+                    <p>同じく、対面にてご要望をお伺いします。</p>
+                    <p>例えば、習い事の発表会での衣装が決まらなかったり、Liveステージでの衣装に頭を悩ませていませんか？</p>
+                    <p>衣装は、小物次第で印象が変わったりします。</p>
+                    <p>組み合わせや、着こなしによっても雰囲気が違います。</p>
+                    <p>舞台の用途に合わせて、小物のご用意やコーディネートをご提案させて頂きます。</p>
+                </dd>
+                <dt><a href="#"><h2>Mijose物語</h2></a></dt>
+                <dd>
+                    <p>初めて洋服を作ったのは、お気に入りの人形に着せるためでした。</p>
+                    <p>今は亡き祖母が、自宅でお仕立ての仕事をしていて、身近な所に生地がありました。</p>
+                    <p>その端きれを人形にあてながら、見よう見まねでハサミを入れワンピースを仕上げたのですが、自分の思い通りのものは出来ませんでした。</p>
+                    <p>子供なりに工夫をして作った人形のワンピースを見た祖母は、私のことを大変褒めてくれましたが、本人は満足していないのです。</p>
+                    <p>何が違うのだろう？</p>
+                    <p>色？</p>
+                    <p>形？</p>
+                    <p>サイズ？</p>
+                    <p>その頃から洋服について考える日々が始まりました。</p>
+                    <p>先ずは、自分の着たい服のデザイン画を描いて、身体に合ったパターンをひいて縫う。</p>
+                    <p>祖母の手ほどきを受けて、自分のパターンでオリジナルの洋服が出来たときの喜び。</p>
+                    <p>その時の気持ちが、Mijoseの仕事につながっているように思います。</p>
+                    <p>それから、直ぐには服飾の仕事に就かなかったのですが、いくつかの職業を経験していくうちに、</p>
+                    <p>やはり自分の原点である手仕事に戻りたいという思いからMijoseを始めました。</p>
+                    <p>回り道を重ねたお陰で、Mijose誕生のきっかけとなる様々な出会いもありました。</p>
+                    <p>その話しは、また別の機会に書かせて頂ければと思います。</p>
+                    <p> Mijoseプロフィール </p>
+                    <p>仕立て業を営む亡き祖母の元、物心ついた頃から身体に合った洋服を身に着けて暮らす。</p>
+                    <p>いくつかの職業を経て、ル・オペラにて、婦人物と紳士物のパターンを学ぶ。</p>
+                    <p>グラフィックデザイナーとしての経験を活かし、オリジナルのデザインで身体にフィットした洋服作りを得意とする。</p>
+                </dd>
+            </dl>
+            <!-- アコーディオン内(終了) -->
+            <!-- メール -->
+            <!-- メール(終了) -->
+        </main>
+        <footer>
+        </footer>
 </body>
+
 </html>
