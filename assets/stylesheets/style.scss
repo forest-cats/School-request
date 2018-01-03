@@ -3,13 +3,37 @@
 $basecolor: #727171;
 
 body {
-    background-color: $basecolor;
-    color: darken($basecolor,30%);
+    background-color: #fff;
+    color: darken($basecolor, 30%);
 }
 
+// ナビゲーションバー
+.navbar {
+    li {
+        list-style-type: none;
+        text-align: center;
+        a {
+        text-decoration: none;
+        display: block;
+        }
+    }
+}
+// ナビゲーションバー（終了）
+// メイン（開始）
+main {
+    margin: 20% 10%;
+    padding: 20px auto;
+}
+.slick-box {
+    img {
+        width: 300px;
+        height: 300px;
+    }
+    }
+// メイン（終了）
 // アコーディオン
 #accordion {
-    border: 1px lighten($basecolor,30%) solid;
+    border: 1px lighten($basecolor, 30%) solid;
     border-top: none;
     width: 100%;
     dt {
@@ -18,15 +42,25 @@ body {
         border-top: 1px #ccc solid;
         text-align: center;
         a {
-            color: lighten($basecolor,30%);
+            color: lighten($basecolor, 30%);
             text-decoration: none;
             display: block;
         }
     }
     dd {
-        background-color: lighten($basecolor,30%);
-        padding: 10px;
+        background-color: lighten($basecolor, 30%);
+        padding: 20px 30px;
+        margin: 10px;
+        a {
+            text-decoration: none;
+            color: #ff0000;
+            /*リンク時のリンクの色*/
+            &:hover {
+                text-decoration: none;
+                color: #00ff00;
+                /*マウスホバー時のリンクの色*/
+            }
+        }
     }
 }
-
 // アコーディオン終了
