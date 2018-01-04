@@ -18,20 +18,14 @@ body {
         }
     }
 }
-// ナビゲーションバー（終了）
-// メイン（開始）
+// ナビゲーションバー(終了)
+// メイン(開始)
 main {
     margin: 20% 10%;
     padding: 20px auto;
 }
-.slick-box {
-    img {
-        width: 300px;
-        height: 300px;
-    }
-    }
-// メイン（終了）
-// アコーディオン
+// メイン(終了)
+// アコーディオン(開始)
 #accordion {
     border: 1px lighten($basecolor, 30%) solid;
     border-top: none;
@@ -63,4 +57,40 @@ main {
         }
     }
 }
-// アコーディオン終了
+// アコーディオン(終了)
+
+// slick(開始)
+// カスタム
+.slick-coordination {
+    img{
+        width: 400px;
+        height: 400px;
+    }
+}
+.slick-coordination-nav {
+    img{
+        width: 50px;
+        height: 50px;
+    }
+}
+/*左右の矢印の色を変える*/
+.slick-prev:before,
+.slick-next:before {
+    color: #000;
+}
+/*左右の矢印の位置を変える*/
+.slick-next {
+    right: 20px;
+    z-index: 99;
+}
+.slick-prev {
+     left: 15px;
+    z-index: 100;
+}
+/*スライド数のドットの色を変える*/
+.slick-dots li.slick-active button:before,
+.slick-dots li button:before {
+    color: #fff;
+}
+// slick(終了)
+

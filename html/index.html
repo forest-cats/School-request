@@ -10,14 +10,19 @@
     <meta name="discription" content="洋服,衣装,オーダーメイド,リメイク,お直し,コーディネート,舞台,縫製,パターン,丁寧,体にフィット">
     <!-- custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- slick CSS -->
+    <link rel="stylesheet" type="text/css" href="css/slick/slick.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/slick/slick-theme.css" media="screen">
     <!-- font awesome -->
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/accordion.js"></script>
     <script src="js/word.js"></script>
-    <!-- slick -->
+    <!-- slick js -->
+    <script src="js/slick/slick.min.js"></script>
+    <script src="js/slick/slick-custom.js"></script>
     <!-- BootStrap -->
-    <!-- Latest compiled and 　sminified CSS -->
+    <!-- Latest compiled and sminified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
@@ -29,18 +34,18 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-fixed-top">
+        <nav class="navbar">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-xs-12">
                         <ul>
-                            <li class="navbar-order"><a href="#main-order">Order</a></li>
-                            <li class="navbar-remake"><a href="#main-remake">Remake</a></li>
-                            <li class="navbar-coordination"><a href="#main-coordination">Coordination</a></li>
-                            <li class="navbar-logo"><a href="#">logo</a></li>
-                            <li class="navbar-story"><a href="#main-story">Mijose Story</a></li>
-                            <li class="navbar-profile"><a href="#main-profile">Profile</a></li>
-                            <li class="navbar-mail"><a href="#main-mail">Mail</a></li>
+                            <li class="navbar-order"><a class="button" href="#main-order">Order</a></li>
+                            <li class="navbar-remake"><a class="button" href="#main-remake">Remake</a></li>
+                            <li class="navbar-coordination"><a class="button" href="#main-coordination">Coordination</a></li>
+                            <li class="navbar-logo"><a href="#"><img src="images/logo/mijoselogo.png" alt="mijoseロゴ画像"></a></li>
+                            <li class="navbar-story"><a class="button" href="#main-story">Mijose Story</a></li>
+                            <li class="navbar-profile"><a class="button" href="#main-profile">Profile</a></li>
+                            <li class="navbar-mail"><a class="button" href="#main-mail">Mail</a></li>
                         </ul>
                     </div>
                 </div>
@@ -56,11 +61,16 @@
                     <div class="row">
                         <div class="col-xs-12 col-md-6">
                             <div class="col-xs-12 col-md-6">
-                            <ul class="slick-box">
-                                <li><img src="images/coordination/coordination01.JPG" alt="洋服のオーダーメイド-01"></li>
-                                <li><img src="images/coordination/coordination02.JPG" alt="洋服のオーダーメイド-02"></li>
-                            </ul>
-                        </div>
+                                <!--スライダー本体 -->
+                                <ul class="slick-order">
+                                    <li><img src="images/coordination/coordination01.JPG" alt="洋服のオーダーメイド-01"></li>
+                                    <li><img src="images/coordination/coordination02.JPG" alt="洋服のオーダーメイド-02"></li>
+                                </ul>
+                                <ul class="slick-order-nav">
+                                    <li><img src="images/coordination/coordination01.JPG" alt="洋服のオーダーメイド-01"></li>
+                                    <li><img src="images/coordination/coordination02.JPG" alt="洋服のオーダーメイド-02"></li>
+                                </ul>
+                            </div>
                             </ul>
                         </div>
                         <div class="col-xs-12 col-md-6">
@@ -80,11 +90,16 @@
                     <div class="row">
                         <div class="col-xs-12 col-md-6">
                             <div class="col-xs-12 col-md-6">
-                            <ul class="slick-box">
-                                <li><img src="images/coordination/coordination01.JPG" alt="洋服・衣装のリメイク-01"></li>
-                                <li><img src="images/coordination/coordination02.JPG" alt="洋服・衣装のリメイク-02"></li>
-                            </ul>
-                        </div>
+                                <!--スライダー本体 -->
+                                <ul class="slick-remake">
+                                    <li><img src="images/coordination/coordination01.JPG" alt="洋服・衣装のリメイク-01"></li>
+                                    <li><img src="images/coordination/coordination02.JPG" alt="洋服・衣装のリメイク-02"></li>
+                                </ul>
+                                <ul class="slick-remake-nav">
+                                    <li><img src="images/coordination/coordination01.JPG" alt="洋服・衣装のリメイク-01"></li>
+                                    <li><img src="images/coordination/coordination02.JPG" alt="洋服・衣装のリメイク-02"></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="col-xs-12 col-md-6">
                             <p>同じく、対面にてご要望をお伺いします。</p>
@@ -101,7 +116,17 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-md-6">
-                            <ul class="slick-box">
+                            <!--スライダー本体 -->
+                            <ul class="slick-coordination">
+                                <li><img src="images/coordination/coordination01.JPG" alt="衣装のコーディネイト-01"></li>
+                                <li><img src="images/coordination/coordination02.JPG" alt="衣装のコーディネイト-02"></li>
+                                <li><img src="images/coordination/coordination03.JPG" alt="衣装のコーディネイト-03"></li>
+                                <li><img src="images/coordination/coordination04.JPG" alt="衣装のコーディネイト-04"></li>
+                                <li><img src="images/coordination/coordination05.JPG" alt="衣装のコーディネイト-05"></li>
+                                <li><img src="images/coordination/coordination06.JPG" alt="衣装のコーディネイト-06"></li>
+                            </ul>
+                            <!--スライダー本体 -->
+                            <ul class="slick-coordination-nav">
                                 <li><img src="images/coordination/coordination01.JPG" alt="衣装のコーディネイト-01"></li>
                                 <li><img src="images/coordination/coordination02.JPG" alt="衣装のコーディネイト-02"></li>
                                 <li><img src="images/coordination/coordination03.JPG" alt="衣装のコーディネイト-03"></li>
@@ -174,10 +199,9 @@
     <footer>
     </footer>
     XHTML
-
-<script type="text/javascript" src="http//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="http//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="http//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
 </body>
 
 </html>
