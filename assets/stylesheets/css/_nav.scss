@@ -1,0 +1,11 @@
+@charset "UTF-8";
+// ナビゲーションバー
+.navbar {
+    li {
+        list-style-type: none;
+        text-align: center;
+        a {
+            text-decoration: none;
+        }
+    }
+}

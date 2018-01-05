@@ -1,54 +1,23 @@
-// オーダーメイド
+
 $(function() {
-     $('.slick-order').slick({
+     $('.slick-box').slick({
           infinite: true, //無限スクロール
-          slidesToShow: 1,//スライドが見える数
-          slidesToScroll: 1,//スライドのスクロール数
+          slidesToShow: 1, //スライドが見える数
+          slidesToScroll: 1, //スライドのスクロール数
           arrows: false,
-          fade: true,
-          asNavFor: '.slick-order-nav'
+          fade: true, //切り替え時のフェードイン設定
+          asNavFor: '.slick-nav',
      });
-     $('.slick-order-nav').slick({
+     $('.slick-nav').slick({
           infinite: true,
           slidesToShow: 4,
           slidesToScroll: 1,
-          asNavFor: '.slick-order',
+          asNavFor: '.slick-box',
           focusOnSelect: true,
+          autoplay: true, //自動再生
+          pauseOnHover: true, //自動再生時スライドエリアにマウスオンで一時停止
      });
 });
-// リメイク
-$(function() {
-     $('.slick-remake').slick({
-          infinite: true, //無限スクロール
-          slidesToShow: 1,//スライドが見える数
-          slidesToScroll: 1,//スライドのスクロール数
-          arrows: false,
-          fade: true,
-          asNavFor: '.slick-remake-nav'
-     });
-     $('.slick-remake-nav').slick({
-          infinite: true,
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          asNavFor: '.slick-remake',
-          focusOnSelect: true,
-     });
-});
-// コーディネイト
-$(function() {
-     $('.slick-coordination').slick({
-          infinite: true, //無限スクロール
-          slidesToShow: 1,//スライドが見える数
-          slidesToScroll: 1,//スライドのスクロール数
-          arrows: false,
-          fade: true,
-          asNavFor: '.slick-coordination-nav'
-     });
-     $('.slick-coordination-nav').slick({
-          infinite: true,
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          asNavFor: '.slick-coordination',
-          focusOnSelect: true,
-     });
-});
+
+
+

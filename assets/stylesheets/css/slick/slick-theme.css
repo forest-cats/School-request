@@ -71,7 +71,8 @@
     line-height: 1;
 
     opacity: .75;
-    color: white;
+    /*color: white;*/
+    color: #ff0000;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -88,7 +89,9 @@
 }
 .slick-prev:before
 {
-    content: '←';
+    /*content: '←'; サムネ矢印←*/
+    content: "\f100";
+    font-family: FontAwesome;
 }
 [dir='rtl'] .slick-prev:before
 {
@@ -106,7 +109,10 @@
 }
 .slick-next:before
 {
-    content: '→';
+   /*content: '→'; サムネ矢印→*/
+    content: "\f101";
+    font-family: FontAwesome;
+
 }
 [dir='rtl'] .slick-next:before
 {
@@ -202,3 +208,7 @@
     opacity: .75;
     color: black;
 }
+
+
+
+
