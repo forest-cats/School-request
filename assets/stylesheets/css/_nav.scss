@@ -1,0 +1,18 @@
+@charset "UTF-8";
+// ナビゲーションバー
+.navbar {
+    li {
+        list-style-type: none;
+        text-align: center;
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+// .navbar-brand-img {
+//   background: url("../../images/mijoselogo.png") no-repeat left center;
+//   background-size: contain;
+//   height: 50px;
+//   width: 250px;
+// }

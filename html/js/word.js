@@ -1,4 +1,3 @@
-
     // ナブメニュー文字変換
     $(function() {
         $('.navbar-order a, .main-order a').hover(function() {
@@ -33,3 +32,5 @@
             $(this).text('Mail');
         });
     });
+
+
