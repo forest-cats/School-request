@@ -1,4 +1,5 @@
-    // アコーディオン基本
+
+    // アコーディオン(メイン)
     $(function() {
         $('#accordion dd').hide();
         $('#accordion dt').click(function() {
@@ -6,6 +7,7 @@
             $(this).next('dd').siblings('dd').slideUp();
         });
     });
+    // アコーディオン(ナビゲーション用)
     $(function() {
         $('#accordion dd').hide();
         $('.navbar-order a').click(function() {
