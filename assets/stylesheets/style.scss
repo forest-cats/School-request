@@ -12,41 +12,91 @@
 $basecolor: #727171;
 
 
-body {
-    background: darken($basecolor, 15%);
-    color: darken($basecolor, 30%);
-    margin: 0;
+
+
+/* 一括で全ての要素の余白をゼロに指定 */
+
+* {
     padding: 0;
+    margin: 0;
+    a {
+        &:link {
+            text-decoration: none;
+        }
+        &:visited {
+            text-decoration: none;
+        }
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
 
 
-/* --- コンテナ --- */
 
-#container {
-    width: 90%;
-    margin: 0 auto;
-}
+
+
+/* ---------------------------------------- レイアウトに関する指定 */
+
+
+/* -- ヘッダーの外枠 -- */
 
 body {
-    header {
-        height: 100px;
-        background: darken($basecolor, 15%);
+    background-color: darken($basecolor, 20%);
+    color: darken($basecolor, 30%);
+
+    #custom-header {
+        background-color: darken($basecolor, 30%);
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        border: 1px solid #ff0000; //後で削除
+        #custom-header-inner {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px 0 10px;
+            border: 1px solid #ff0000; //後で削除
+        }
     }
-    main {
-        height: 1000px;
-        background: lighten($basecolor, 40%);
+
+    #custom-container {
+        background-color: lighten($basecolor, 50%);
+        width: 90%;
+        margin: 10px auto;
+        border: 1px solid #ff0000; //後で削除
+        #accordion-space {
+            width: 100%;
+            border: 1px solid #ff0000; //後で削除
+        }
+        #mail-space {
+            width: 100%;
+            border: 1px solid #ff0000; //後で削除
+        }
     }
-    footer {
-        height: 100px;
-        background: darken($basecolor, 30%);
+
+
+    #custom-footer {
+        background-color: darken($basecolor, 30%);
+        color: #000000;
+        width: 100%;
+        margin: 0 auto;
+        padding: 1em 0 2em;
+        border: 1px solid #ff0000; //後で削除
+        #custom-footer-inner {
+            border: 1px solid #ff0000; //後で削除
+            width: 90%;
+            margin: 0 auto;
+        }
     }
 }
 
-.accordion-space {
-    border: 1px darken($basecolor, 20%) solid; //後で消す
-}
 
-.mail-space {
-    width: 100%;
-    border: 1px darken($basecolor, 20%) solid;
-}
+
+
+// .accordion-space {
+//     border: 1px darken($basecolor, 20%) solid; //後で消す
+// }
+// .mail-space {
+//     width: 100%;
+//     border: 1px darken($basecolor, 20%) solid;
+// }
