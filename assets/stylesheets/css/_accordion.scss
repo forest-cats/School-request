@@ -2,70 +2,23 @@
 
 $basecolor: #727171;
 
-.accordion-space {
-    width: 90%;
-    height: 70%;
-    margin: 20% auto;
-    #accordion {
-        width: 100%;
-        border: 1px darken($basecolor, 20%) solid;
 
-        dt {
-            border-top: 1px #ccc solid;
-            text-align: center;
-        }
-    }
+@media screen and (min-width:499px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 
-// アコーディオン設定(開始)
-// #accordion {
-//     width: 100%;
-//     border: 1px darken($basecolor, 20%) solid;
-//     border-top: none;
-//     margin: 0 auto;
-//     dt {
-//         height: 50%;
-//         background: darken($basecolor, 20%);
-//         border-top: 1px #ccc solid;
-//         text-align: center;
-//         padding: 10px;
-//         a {
-//             color: lighten($basecolor, 30%);
-//             display: block;
-//         }
-//     }
-//     dd {
-//         width: 100%;
-//         height: 100%;
-//         background-color: lighten($basecolor, 30%);
-//         padding: 20px 30px;
-//         margin: 10px;
-//         .dd-images {
-//             padding: 10%;
-//             margin: 5px;
-//             .slick-box {
-//                 padding: 0;
-//                 margin: 0;
-//             }
-//             .slick-nav {
-//                 padding: 0;
-//                 margin: 0;
-//             }
-//         }
-//         .dd-contents {
-//             padding: 10px;
-//             margin: 0;
-//             a {
-//                 color: #ff0000;
-//                 /*リンク時のリンクの色*/
-//                 &:hover {
-//                     text-decoration: none;
-//                     color: #00ff00;
-//                     /*マウスホバー時のリンクの色*/
-//                 }
-//             }
-//         }
-//     }
-// }
-// アコーディオン(終了)
