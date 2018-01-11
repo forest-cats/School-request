@@ -14,6 +14,10 @@ $basecolor: #727171;
 
 
 
+
+
+
+
 /* 一括で全ての要素の余白をゼロに指定 */
 
 * {
@@ -33,7 +37,26 @@ $basecolor: #727171;
 }
 
 
+@media (min-width: 992px) {
+    .container {
+        width: 100%;
+    }
+}
 
+@media (min-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
 
 
 /* ---------------------------------------- レイアウトに関する指定 */
@@ -73,6 +96,7 @@ body {
             border: 1px solid #ff0000; //後で削除
         }
     }
+
 
 
     #custom-footer {
