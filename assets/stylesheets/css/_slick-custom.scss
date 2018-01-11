@@ -1,21 +1,38 @@
 @charset "UTF-8";
 // Slick カスタム
 
-.dd-images {
-    .slick-box {
-        img {
-            width: 400px;
-            height: 400px;
-        }
-    }
-    .slick-nav {
-        img {
-            width: 50px;
-            height: 50px;
-        }
-    }
+$basecolor: #727171;
+
+// body (color設定)
+@mixin main-bgc {
+    background-color: darken($basecolor, 10%);
+}
+
+// contents (color設定)
+@mixin main-inner-bgc {
+    background-color: #fff;
+}
+
+// dl-dt-dd (color設定)
+@mixin dt-bgc {
+     background: darken($basecolor, 20%);
+}
+@mixin dd-bgc {
+     background: lighten($basecolor, 30%);
 }
 
 
+// mixinの設定
+// @mixin ;
+// @mixin circle($size) {
+//      width: $size;
+//      height: $size;
+//      border-radius: 100%;
+// }
 
-
+// CSSで呼び出し
+// @include ;
+// .box {
+//      @include circle(100px);
+//      background: #fc0;
+// }

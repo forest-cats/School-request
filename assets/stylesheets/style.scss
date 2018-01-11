@@ -18,11 +18,24 @@ $basecolor: #727171;
 
 
 
+
+
 /* 一括で全ての要素の余白をゼロに指定 */
 
 * {
     padding: 0;
     margin: 0;
+    li {
+        list-style-type: none;
+    }
+    h2 {
+        padding: 0;
+        margin: 0;
+    }
+    p {
+        padding: 0;
+        margin: 0;
+    }
     a {
         &:link {
             text-decoration: none;
@@ -59,13 +72,17 @@ $basecolor: #727171;
 }
 
 
+
+
+
+
+
 /* ---------------------------------------- レイアウトに関する指定 */
 
 
 /* -- ヘッダーの外枠 -- */
 
 body {
-    background-color: darken($basecolor, 20%);
     color: darken($basecolor, 30%);
 
     #custom-header {
@@ -83,20 +100,102 @@ body {
     }
 
     #custom-container {
-        background-color: lighten($basecolor, 50%);
-        width: 90%;
-        margin: 10px auto;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
         border: 1px solid #ff0000; //後で削除
         #accordion-space {
-            width: 100%;
+            width: 90%;
+            height: 100%;
+            margin: 20px auto 0;
             border: 1px solid #ff0000; //後で削除
+            #accordion {
+                width: 95%;
+                margin: 0 auto; // border: 1px solid #ff0000; //後で削除(accorion)
+                dt {
+                    padding: 10px;
+                    margin: 0; // border: 1px solid #ff0000; //後で削除(accorion)
+                }
+                dd {
+                    padding: 20px 30px;
+                    margin: 10px; // border: 1px solid #ff0000; //後で削除(accorion)
+                    .container {
+                        .row {
+                            width: 100%;
+                            height: 100%;
+                            .dd-images {
+                                width: 100%;
+                                height: 100%;
+                                border: 1px solid #00ff00; //後で削除
+                                .custom-dd-images {
+                                    width: 100%;
+                                    height: 100%;
+                                    border: 1px solid #00ff00; //後で削除
+                                    .custom-slick-box {
+                                        width: 100%;
+                                        height: 100%;
+                                        border: 1px solid #0000ff; //後で削除
+                                        img {
+                                            width: 100%;
+                                            height: auto;
+                                        }
+                                    }
+
+                                }
+                            }
+                            .dd-contents {
+                                width: 100%;
+                                height: 100%;
+                                border: 1px solid #00ff00; //後で削除
+                                .custom-dd-contents {
+                                    width: 100%;
+                                    height: 100%;
+                                    border: 1px solid #00ff00; //後で削除
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
-        #mail-space {
-            width: 100%;
-            border: 1px solid #ff0000; //後で削除
+        .label-top {
+            padding: 5px;
+            margin: 10px auto;
+            border: 1px solid #00ff00; //後で削除
         }
     }
 
+    #mail-space {
+        width: 100%;
+        height: 100%;
+        margin: 20px auto;
+        border: 1px solid #ff0000; //後で削除
+        #custom-mail-inner {
+            width: 90%;
+            height: 100%;
+            padding: 0;
+            margin: 0 auto;
+            border: 1px solid #ff0000; //後で削除
+            #custom-mail-space {
+                width: 95%;
+                height: 100%;
+                margin: 0 auto;
+                border: 1px solid #00ff00; //後で削除
+                dl {
+                    margin: 0;
+                    border: 1px solid #00ff00; //後で削除
+                    dt {
+                        padding: 10px;
+                        border: 1px solid #00ff00; //後で削除
+                    }
+                    dd {
+                        padding: 10px;
+                        border: 1px solid #00ff00; //後で削除
+                    }
+                }
+            }
+        }
+    }
 
 
     #custom-footer {
@@ -104,7 +203,7 @@ body {
         color: #000000;
         width: 100%;
         margin: 0 auto;
-        padding: 1em 0 2em;
+        padding: 20px 0 40px;
         border: 1px solid #ff0000; //後で削除
         #custom-footer-inner {
             border: 1px solid #ff0000; //後で削除
@@ -115,12 +214,25 @@ body {
 }
 
 
+// 上に戻るボタン
+#page-top {
+    display: none;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
 
+#move-page-top {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
 
-// .accordion-space {
-//     border: 1px darken($basecolor, 20%) solid; //後で消す
-// }
-// .mail-space {
-//     width: 100%;
-//     border: 1px darken($basecolor, 20%) solid;
-// }
+#move-page-top:hover {
+    color: #f00;
+}
+

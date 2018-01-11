@@ -1,72 +1,65 @@
-
-// Bootstrap カスタム
-
 // @charset "UTF-8";
-// // ナビゲーションバー
-// @media screen and (min-width:480px) {
-//     /* 画面サイズ 1000px以上から適用 */
-//     nav {
-//         .container-fluid {
-//             // width: 90%;
-//             // height: 100%;
-//             margin: auto;
-//             padding: 0;
-//         }
+// // Bootstrap カスタム
 
-//         #nav-responsive {
-//             ul {
-//                 // width: 100%;
-//                 // height: 100%;
-//                 display: flex;
-//                 li {
-//                     list-style-type: none;
-//                     text-align: center;
-//                     justify-content: space-between;
-//                     margin: auto;
-//                     padding: auto;
-//                     a {
-//                         text-decoration: none;
-//                         display: block;
-//                         margin: 5px;
-//                         padding: auto 100%;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-//         .navbar-logo a {
-//         width: 200px;
-//         img {
-//             width: 100%;
-//         }
-//     }
+
+
+// .slider {
+//   margin:0;
+//   padding: 0;
 // }
-//      // .navbar-brand-img {
-//     //   background: url("../../images/mijoselogo.png") no-repeat left center;
-//     //   background-size: contain;
-//     //   height: 50px;
-//     //   width: 250px;
-//     // }
+// .custom-slick-box {
+//   width:600px;
+//   margin:10px auto;
+//   position: relative;
+//   a {
+//     color: #666;
+//   }
+// }
+// .slide {
+//   display:none;
+//   li {
+//     list-style: none;
+//   }
+//   &.slick-initialized {
+//     display:block;
+//   }
+// }
+// .slick-dots {
+//   margin-top:5px;
+//   margin-left: -5px;
+//   margin-right: -5px;
+//   display:flex;
+//   justify-content: center;
+//   li {
+//     list-style: none;
+//     display: inline-block;
+//     max-width: 112px;
+//     max-hegiht: 56px;
+//     margin: 5px;
 
+//     img {
+//       opacity: 0.5;
+//       width: 100%;
+//       height: auto;
+//     }
 
-// 上に戻るボタン
-#page-top {
-    display: none;
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
+//     &.slick-active {
+//       img {
+//         opacity: 1;
+//       }
+//     }
+//   }
+// }
 
-#move-page-top {
-    color: #333;
-    text-decoration: none;
-    display: block;
-    cursor: pointer;
-}
-
-#move-page-top:hover {
-    color: #f00;
-}
+// .slick-prev {
+//   position: absolute;
+//   z-index: 99;
+//   top:120px;
+//   left: -50px;
+// }
+// .slick-next {
+//   position: absolute;
+//   z-index: 99;
+//   top:120px;
+//   right: -50px;
+// }
