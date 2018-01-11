@@ -19,7 +19,7 @@ gulp.task("copy", function() {
 });
 
 gulp.task("sass", function() {
-  return gulp.src(["assets/stylesheets/*.scss"])
+  return gulp.src(["assets/stylesheets/**/*.scss"])
   .pipe(sass({outputStyle: 'compressed'}))
   .pipe(gulp.dest("html/css/"))
   .pipe(browserSync.stream());
@@ -32,5 +32,5 @@ gulp.task('default', ['delHtml','delSass','copy','sass'], function() {
     }
   });
   gulp.watch(['assets/**/*.html'], ['delHtml','copy']);
-  gulp.watch(['assets/stylesheets/*.scss'], ['delSass','sass']);
+  gulp.watch(['assets/stylesheets/**/*.scss'], ['delSass','sass']);
 });

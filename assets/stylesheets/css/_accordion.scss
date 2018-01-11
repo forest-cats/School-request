@@ -2,36 +2,66 @@
 
 $basecolor: #727171;
 
+body {
+    background-color: #fff;
+    #custom-container {
+        @include main-bgc;
 
-// アコーディオン設定(開始)
-#accordion {
-    border: 1px darken($basecolor, 20%) solid;
-    border-top: none;
-    width: 100%;
-    dt {
-        background: darken($basecolor, 20%);
-        padding: 10px;
-        border-top: 1px #ccc solid;
-        text-align: center;
-        a {
-            color: lighten($basecolor, 30%);
-            display: block;
-        }
-    }
-    dd {
-        background-color: lighten($basecolor, 30%);
-        padding: 20px 30px;
-        margin: 10px;
-        a {
-            color: #ff0000;
-            /*リンク時のリンクの色*/
-            &:hover {
-                text-decoration: none;
-                color: #00ff00;
-                /*マウスホバー時のリンクの色*/
+        #accordion-space {
+            @include main-inner-bgc;
+            #accordion {
+                border: 1px darken($basecolor, 20%) solid;
+                border-top: none;
+                dt {
+                    @include dt-bgc;
+                    border-top: 1px #ccc solid;
+                    text-align: center;
+                    vertical-align: middle;
+                    h2 {
+                        display: block;
+                        a {
+                            color: lighten($basecolor, 30%);
+                        }
+                    }
+                }
+                dd {
+                    @include dd-bgc;
+                    color: darken($basecolor, 30%);
+                }
             }
         }
     }
 }
 
-// アコーディオン(終了)
+#custom-mail-inner {
+    @include main-inner-bgc;
+#custom-mail-space {
+    dt {
+        @include dt-bgc;
+    }
+    dd {
+        @include dd-bgc;
+    }
+}
+}
+// @media screen and (min-width:499px) {}
+// // アコーディオン設定(開始)
+// #accordion {
+//     dd {
+//         .dd-images {
+//             padding: 10%;
+//             margin: 5px;
+//             .slick-box {
+//                 padding: 0;
+//                 margin: 0;
+//             }
+//             .slick-nav {
+//                 padding: 0;
+//                 margin: 0;
+//             }
+//         }
+
+//         }
+//     }
+// }
+// // アコーディオン(終了)
