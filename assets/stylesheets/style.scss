@@ -13,13 +13,6 @@ $basecolor: #727171;
 
 
 
-
-
-
-
-
-
-
 /* 一括で全ての要素の余白をゼロに指定 */
 
 * {
@@ -71,7 +64,12 @@ $basecolor: #727171;
     margin-right: 0;
 }
 
+html
+{
+    min-height: 100%;
+    margin: 0;
 
+}
 
 
 
@@ -79,11 +77,9 @@ $basecolor: #727171;
 
 /* ---------------------------------------- レイアウトに関する指定 */
 
-
-/* -- ヘッダーの外枠 -- */
-
 body {
     color: darken($basecolor, 30%);
+
 
     #custom-header {
         background-color: darken($basecolor, 30%);
@@ -117,51 +113,67 @@ body {
                     margin: 0; // border: 1px solid #ff0000; //後で削除(accorion)
                 }
                 dd {
-                    padding: 20px 30px;
+                    padding: 0;
                     margin: 10px; // border: 1px solid #ff0000; //後で削除(accorion)
                     .container {
                         .row {
                             width: 100%;
                             height: 100%;
-                            .dd-images {
-                                width: 100%;
-                                height: 100%;
+                            margin: 20px auto;
+                            border: 1px solid #00ff00; //後で削除
+                            div {
+                                max-width: 500px;
+                                max-height: 550px;
+                                min-width: 300px;
+                                min-height: 400px;
+                                margin: 0 auto;
                                 border: 1px solid #00ff00; //後で削除
-                                .custom-dd-images {
-                                    width: 100%;
+                                .dd-images {
+                                    max-width: 100%;
                                     height: 100%;
+                                    margin: 0;
                                     border: 1px solid #00ff00; //後で削除
-                                    .custom-slick-box {
-                                        width: 100%;
+                                    .custom-dd-images {
+                                        max-width: 100%;
                                         height: 100%;
-                                        border: 1px solid #0000ff; //後で削除
-                                        img {
-                                            width: 100%;
-                                            height: auto;
+                                        border: 1px solid #00ff00; //後で削除
+                                        .custom-slick-box {
+                                            max-width: 100%;
+                                            height: 100%;
+                                            border: 1px solid #0000ff; //後で削除
+                                            img {
+                                                max-width: 100%;
+                                                max-height: 100%;
+                                                min-width: 100%;
+                                                min-height: 100%;
+                                                width: 100%;
+                                                height: auto;
+                                            }
                                         }
                                     }
-
                                 }
-                            }
-                            .dd-contents {
-                                width: 100%;
-                                height: 100%;
-                                border: 1px solid #00ff00; //後で削除
-                                .custom-dd-contents {
-                                    width: 100%;
-                                    height: 100%;
+                                .dd-contents {
+                                    max-width: 100%;
+                                    max-height: 100%;
+                                    margin: 0px;
                                     border: 1px solid #00ff00; //後で削除
+                                    .custom-dd-contents {
+                                        width: 100%;
+                                        height: 100%;
+                                        border: 1px solid #00ff00; //後で削除
+                                    }
                                 }
                             }
                         }
                     }
+                    .label-top {
+                        padding: 5px;
+                        margin: 0 auto;
+                        padding-bottom: 20px;
+                        border: 1px solid #00ff00; //後で削除
+                    }
                 }
             }
-        }
-        .label-top {
-            padding: 5px;
-            margin: 10px auto;
-            border: 1px solid #00ff00; //後で削除
         }
     }
 
@@ -186,6 +198,7 @@ body {
                     border: 1px solid #00ff00; //後で削除
                     dt {
                         padding: 10px;
+                        text-align: center;
                         border: 1px solid #00ff00; //後で削除
                     }
                     dd {
@@ -197,11 +210,11 @@ body {
         }
     }
 
-
     #custom-footer {
         background-color: darken($basecolor, 30%);
         color: #000000;
         width: 100%;
+        height: 100px;
         margin: 0 auto;
         padding: 20px 0 40px;
         border: 1px solid #ff0000; //後で削除
@@ -210,29 +223,23 @@ body {
             width: 90%;
             margin: 0 auto;
         }
+    } // 上に戻るボタン
+    #page-top {
+        display: none;
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        #move-page-top {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            cursor: pointer;
+            &:hover {
+                color: #f00;
+            }
+        }
     }
 }
-
-
-// 上に戻るボタン
-#page-top {
-    display: none;
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-#move-page-top {
-    color: #333;
-    text-decoration: none;
-    display: block;
-    cursor: pointer;
-}
-
-#move-page-top:hover {
-    color: #f00;
-}
-
