@@ -14,6 +14,16 @@ $(function() {
 //     });
 // });
 
+$(function() {
+  //最初は全てのパネルを非表示に
+  $('mail-accordion dd').hide();
+  $('#mail-accordion dt')
+    .click(function(e){
+ //選択したパネルを開く
+      $('+dd', this).slideToggle(500);
+    })
+});
+
 
 // アコーディオン(ナビゲーション用)
 $(function() {

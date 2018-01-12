@@ -1,8 +1,14 @@
 @charset "UTF-8";
 
 // // ナビゲーションバー
-// @media screen and (min-width:480px) {
+@media screen and (min-width:499px) {
 //     /* 画面サイズ 1000px以上から適用 */
+
+#nav-custom {
+
+            height: 90px;
+    margin-bottom: 0;
+}
 //     nav {
 //         .container-fluid {
 //             // width: 90%;
@@ -32,13 +38,18 @@
 //             }
 //         }
 //     }
-//         .navbar-logo a {
-//         width: 200px;
-//         img {
-//             width: 100%;
-//         }
-//     }
-// }
+        .navbar-logo a {
+        width: 200px;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+
 //      // .navbar-brand-img {
 //     //   background: url("../../images/mijoselogo.png") no-repeat left center;
 //     //   background-size: contain;
