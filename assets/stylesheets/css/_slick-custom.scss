@@ -1,37 +1,53 @@
 @charset "UTF-8";
 // Slick カスタム
+@mixin custom-slider {
 
-$basecolor: #727171;
 
-// body (color設定)
-@mixin main-bgc {
-    background-color: darken($basecolor, 10%);
+        border: 1px solid #00ff00; //後で削除
+        .custom-slider-top {
+            width: 100%;
+            height: 80%;
+            margin-bottom: 0;
+            .slick-list {
+                width: 100%;
+                height: 100%;
+                .slick-track {
+                    width: 100%;
+                    height: 100%;
+                    .slick-slide {
+                        width: 300px;
+                        height: 300px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .custom-slider-nav {
+            width: 100%;
+            height: 20%;
+            margin-bottom: 0;
+            .slick-list {
+                width: 100%;
+                height: 100%;
+                .slick-track {
+                    width: 100%;
+                    height: 100%;
+                    .slick-slide {
+                        max-width: 300px;
+                        height: 100px;
+                        overflow: hidden;
+                        position: relative;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
 }
-
-// contents (color設定)
-@mixin main-inner-bgc {
-    background-color: #fff;
-}
-
-// dl-dt-dd (color設定)
-@mixin dt-bgc {
-     background: darken($basecolor, 20%);
-}
-@mixin dd-bgc {
-     background: lighten($basecolor, 30%);
-}
-
-// mixinの設定
-// @mixin ;
-// @mixin circle($size) {
-//      width: $size;
-//      height: $size;
-//      border-radius: 100%;
-// }
-
-// CSSで呼び出し
-// @include ;
-// .box {
-//      @include circle(100px);
-//      background: #fc0;
-// }

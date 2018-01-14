@@ -1,15 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
     // ナブメニュー文字変換
     $(function() {
         $('.navbar-order a, .dt-order a').hover(function() {

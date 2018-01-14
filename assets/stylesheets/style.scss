@@ -1,255 +1,298 @@
-@charset "UTF-8";
+    @charset "UTF-8"; // カスタム用
+    @import "css/slick/slick",
+    "css/slick/slick-theme";
+    @import "css/bootstrap/bootstrap";
+    @import "css/slick-custom",
+    "css/bootstrap-custom";
+    @import "css/accordion",
+    "css/nav";
 
-// カスタム用
-@import "css/slick/slick",
-"css/slick/slick-theme";
-@import "css/bootstrap/bootstrap";
-@import "css/slick-custom",
-"css/bootstrap-custom";
-@import "css/accordion",
-"css/nav";
+    $basecolor: #727171;
+    /* 一括で全ての要素の余白をゼロに指定 */
 
-$basecolor: #727171;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 一括で全ての要素の余白をゼロに指定 */
-
-* {
-    padding: 0;
-    margin: 0;
-    li {
-        list-style-type: none;
-    }
-    h2 {
+    * {
         padding: 0;
         margin: 0;
-    }
-    p {
-        padding: 0;
-        margin: 0;
-    }
-    a {
-        &:link {
-            text-decoration: none;
+        h1 {
+            padding: 0;
+            margin: 0;
+            text-indent: -9999px;
+            display: none;
         }
-        &:visited {
-            text-decoration: none;
+        h2 {
+            padding: 0;
+            margin: 0;
         }
-        &:hover {
-            text-decoration: none;
+        ul {
+            list-style: none;
         }
-    }
-}
-
-
-@media (min-width: 992px) {
-    .container {
-        width: 100%;
-    }
-}
-
-@media (min-width: 768px) {
-    .container {
-        width: 100%;
-    }
-}
-
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 0;
-    margin-right: 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ---------------------------------------- レイアウトに関する指定 */
-
-
-/* -- ヘッダーの外枠 -- */
-
-body {
-    color: darken($basecolor, 30%);
-
-    #custom-header {
-        background-color: darken($basecolor, 30%);
-        width: 100%;
-        margin: 0 auto;
-        text-align: center;
-        border: 1px solid #ff0000; //後で削除
-        #custom-header-inner {
-            width: 90%;
-            margin: 0 auto;
-            padding: 20px 0 10px;
-            border: 1px solid #ff0000; //後で削除
+        p {
+            padding: 0;
+            margin: 0;
+        }
+        a {
+            &:link {
+                text-decoration: none;
+            }
+            &:visited {
+                text-decoration: none;
+            }
+            &:hover {
+                text-decoration: none;
+            }
         }
     }
 
-    #custom-container {
-        width: 100%;
-        height: 100%;
-        margin: 0 auto;
-        border: 1px solid #ff0000; //後で削除
-        #accordion-space {
-            width: 90%;
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    /* ---------------------------------------- レイアウトに関する指定 */
+
+    html {
+        min-height: 100%;
+        position: relative;
+
+        body {
+            background-color: #ff0000;
+            width: 100%;
             height: 100%;
-            margin: 20px auto 0;
-            border: 1px solid #ff0000; //後で削除
-            #accordion {
-                width: 95%;
-                margin: 0 auto; // border: 1px solid #ff0000; //後で削除(accorion)
-                dt {
-                    padding: 10px;
-                    margin: 0; // border: 1px solid #ff0000; //後で削除(accorion)
+            margin-bottom: 100px;
+
+            #custom-header {
+                @include nav-footer-bgcolor;
+                width: 100%;
+                height: 90px;
+                margin: 0 auto;
+                border: 1px solid #ff0000; //後で削除
+                h1 {
+                    width: auto;
+                    height: 100%;
+                    @include logo-img;
+                    border: 1px solid #ff0000; //後で削除
                 }
-                dd {
-                    padding: 20px 30px;
-                    margin: 10px; // border: 1px solid #ff0000; //後で削除(accorion)
-                    .container {
-                        .row {
-                            width: 100%;
+                #userfont-size {
+                    width: 100%;
+                    height: 30%;
+                    border: 1px solid #ff0000; //後で削除
+                }
+
+                #custom-nav {
+                    width: 98%;
+                    height: 70%;
+                    margin: 0 auto;
+                    padding: 0;
+                    border: 1px solid #ff0000; //後で削除
+                    .custom-nav-ul {
+                        width: 100%;
+                        height: 100%;
+                        margin: 0;
+                        display: flex;
+                        justify-content: space-between;
+                        li {
+                            width: 160px;
+                            height: 80%;
+                            display: flex;
+                            margin: auto 0;
+                            align-items: center;
+                            justify-content: center;
+                            border: 1px solid #ff0000; //後で削除
+                        }
+                        .navbar-logo {
+                            width: 300px;
                             height: 100%;
-                            .dd-images {
+                            @include logo-img;
+                        }
+                    }
+                }
+            }
+
+
+            #custom-container {
+                width: 100%;
+                height: 100%;
+                margin: 0 auto;
+                border: 1px solid #ff0000; //後で削除
+                #accordion-space {
+                    width: 90%; // height: 100%;
+                    margin: 20px auto 0;
+                    border: 1px solid #ff0000; //後で削除
+                    #accordion {
+                        width: 95%;
+                        margin: 0 auto; // border: 1px solid #ff0000; //後で削除(accorion)
+                        dt {
+                            height: 80px;
+                            padding: 10px;
+                            margin: 0;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center; // border: 1px solid #ff0000; //後で削除(accorion)
+                        }
+                        dd {
+                            padding: 0;
+                            margin: 10px; // border: 1px solid #ff0000; //後で削除(accorion)
+                            .container {
                                 width: 100%;
-                                height: 100%;
-                                border: 1px solid #00ff00; //後で削除
-                                .custom-dd-images {
+                                .row {
                                     width: 100%;
                                     height: 100%;
+                                    margin: 20px auto;
                                     border: 1px solid #00ff00; //後で削除
-                                    .custom-slick-box {
-                                        width: 100%;
-                                        height: 100%;
-                                        border: 1px solid #550000; //後で削除
-                                        .slick-box {
+                                    div {
+                                        margin: 0 auto;
+
+                                        .dd-images {
                                             width: 100%;
                                             height: 100%;
                                             margin: 0;
-                                            padding: 0;
-                                            border: 1px solid #ff0000;
-                                            img {
-                                                width: 50px;
-                                                height: 50px;
+                                            border: 1px solid #00ff00; //後で削除
+
+                                            .custom-dd-images {
+                                                width: 100%;
+                                                height: 100%;
+                                                border: 1px solid #00ff00; //後で削除
+
+                                                @include custom-slider;
+                                            }
+                                        }
+                                        .dd-contents {
+                                            width: 100%;
+                                            height: 100%;
+                                            margin: 0px;
+                                            border: 1px solid #00ff00; //後で削除
+                                            .custom-dd-contents {
+                                                width: 100%;
+                                                height: 100%;
+                                                border: 1px solid #00ff00; //後で削除
                                             }
                                         }
                                     }
-                                }
-                            }
-                            .dd-contents {
-                                width: 100%;
-                                height: 100%;
-                                border: 1px solid #00ff00; //後で削除
-                                .custom-dd-contents {
-                                    width: 100%;
-                                    height: 100%;
-                                    border: 1px solid #00ff00; //後で削除
                                 }
                             }
                         }
                     }
                 }
             }
-        }
-        .label-top {
-            padding: 5px;
-            margin: 10px auto;
-            border: 1px solid #00ff00; //後で削除
-        }
-    }
 
-    #mail-space {
-        width: 100%;
-        height: 100%;
-        margin: 20px auto;
-        border: 1px solid #ff0000; //後で削除
-        #custom-mail-inner {
-            width: 90%;
-            height: 100%;
-            padding: 0;
-            margin: 0 auto;
-            border: 1px solid #ff0000; //後で削除
-            #custom-mail-space {
-                width: 95%;
+            #mail-space {
+                width: 100%;
                 height: 100%;
+                margin: 20px auto 100px;
+                border: 1px solid #ff0000; //後で削除
+                #custom-mail-inner {
+                    width: 90%;
+                    height: 100%;
+                    padding: 0;
+                    margin: 0 auto;
+                    border: 1px solid #ff0000; //後で削除
+                    #custom-mail-space {
+                        width: 95%;
+                        height: 100%;
+                        margin: 0 auto 20px;
+                        border: 1px solid #00ff00; //後で削除
+                        dl {
+                            margin: 0;
+                            border: 1px solid #00ff00; //後で削除
+                            dt {
+                                height: 80px;
+                                padding: 10px;
+                                text-align: center;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border: 1px solid #00ff00; //後で削除
+                            }
+                            dd {
+                                height: 100%;
+                                padding: 20px 20px 0;
+                                border: 1px solid #ff0000; //後で削除
+                                .custom-fome {
+                                    width: 100%;
+                                    height: 100%;
+                                    border: 1px solid #ff0000; //後で削除
+                                    display: flex;
+                                    align-items: center;
+                                    form {
+                                        width: 90%;
+                                        margin: 0 auto;
+                                        border: 1px solid #0000ff; //後で削除
+                                        ul {
+                                            width: 100%;
+                                            height: 100%;
+                                            margin: 0 auto;
+                                            border: 1px solid #0000ff; //後で削除
+                                            li {
+                                                width: 100%;
+                                                padding: 5px;
+                                                border: 1px solid #0000ff; //後で削除
+                                                label {
+                                                    margin: 5px;
+                                                    display: block;
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                }
+                                            }
+                                            .message textarea {
+                                                min-height: 250px;
+                                            }
+                                            .submit input {
+                                                width: 100px;
+                                                height: 50px;
+                                                border: 1px solid #0000ff; //後で削除
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .label-top {
+                height: 70px;
+                padding-bottom: 20px;
                 margin: 0 auto;
                 border: 1px solid #00ff00; //後で削除
-                dl {
-                    margin: 0;
-                    border: 1px solid #00ff00; //後で削除
-                    dt {
-                        padding: 10px;
-                        border: 1px solid #00ff00; //後で削除
-                    }
-                    dd {
-                        padding: 10px;
-                        border: 1px solid #00ff00; //後で削除
+            }
+
+            #custom-footer {
+                position: absolute;
+                bottom: 0;
+                color: #000000;
+                width: 100%;
+                height: 100px;
+                margin: 0 auto;
+                padding: 20px 0 40px;
+                border: 1px solid #ff0000; //後で削除
+                #custom-footer-inner {
+                    border: 1px solid #ff0000; //後で削除
+                    width: 90%;
+                    margin: 0 auto;
+                }
+            } // 上に戻るボタン
+            #page-top {
+                display: none;
+                position: fixed;
+                right: 30px;
+                bottom: 30px;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+
+                #move-page-top {
+                    color: #333;
+                    text-decoration: none;
+                    display: block;
+                    cursor: pointer;
+                    &:hover {
+                        color: #f00;
                     }
                 }
             }
         }
     }
-
-
-    #custom-footer {
-        background-color: darken($basecolor, 30%);
-        color: #000000;
-        width: 100%;
-        margin: 0 auto;
-        padding: 20px 0 40px;
-        border: 1px solid #ff0000; //後で削除
-        #custom-footer-inner {
-            border: 1px solid #ff0000; //後で削除
-            width: 90%;
-            margin: 0 auto;
-        }
-    }
-}
-
-
-// 上に戻るボタン
-#page-top {
-    display: none;
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-#move-page-top {
-    color: #333;
-    text-decoration: none;
-    display: block;
-    cursor: pointer;
-}
-
-#move-page-top:hover {
-    color: #f00;
-}
