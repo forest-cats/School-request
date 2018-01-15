@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+
+$basecolor: #727171;
+
+body {
+    background-color: #fff;
+    color: darken($basecolor, 30%);
+}
+
+#custom-header {
+    @include vibes-style;
+    &:hover {
+        @include mintyo-style;
+    }
+}
+
+dt {
+    @include vibes-style;
+    @include dt-bgcolor;
+    border-top: 1px #ccc solid;
+    &:hover {
+        @include mintyo-style;
+    }
+}
+
+dd {
+    @include dd-bgcolor;
+    color: darken($basecolor, 30%);
+    .dd-contents {
+        text-shadow: 0 0 12px #FFB74C;
+        font-size: 110%;
+        p{
+            @include mintyo-style;
+        }
+    }
+}
+
+h2 {
+    a {
+        color: lighten($basecolor, 30%);
+    }
+}
+
+#custom-header,
+#custom-footer {
+    @include nav-footer-bgcolor;
+}
+#custom-footer-inner{
+    color:lighten($basecolor, 30%);
+}
+
+.custom-space {
+    @include main-bgcolor;
+    .custom-inner {
+        @include main-inner-bgcolor; //後で消す
+    }
+}
+
+#accordion,
+#mail-accordion {
+    border: 1px darken($basecolor, 20%) solid;
+    border-top: none;
+}

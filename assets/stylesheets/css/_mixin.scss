@@ -1,7 +1,14 @@
 @charset "UTF-8";
-//  ロゴ画像・カラー　（カスタム）
+//  フォント指定
 $basecolor: #727171;
+@mixin mintyo-style {
+        font-family: "ＭＳ 明朝", serif;
+}
+@mixin vibes-style {
+        font-family: 'Great Vibes', cursive;
+}
 
+//  ロゴ画像・カラー　（カスタム）
 @mixin logo-img {
     text-indent: -9999px;
     background: url(../images/logo/mijoselogo.png) center no-repeat;
