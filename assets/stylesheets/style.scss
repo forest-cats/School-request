@@ -1,298 +1,236 @@
-    @charset "UTF-8"; // カスタム用
-    @import "css/slick/slick",
-    "css/slick/slick-theme";
-    @import "css/bootstrap/bootstrap";
-    @import "css/slick-custom",
-    "css/bootstrap-custom";
-    @import "css/accordion",
-    "css/nav";
+@charset "UTF-8"; // カスタム用
+@import "css/slick/slick",
+"css/slick/slick-theme";
+@import "css/bootstrap/bootstrap";
+@import "css/slick-custom";
+@import "css/mixin","css/color","css/accordion";
 
-    $basecolor: #727171;
-    /* 一括で全ての要素の余白をゼロに指定 */
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes');
 
-    * {
-        padding: 0;
-        margin: 0;
-        h1 {
-            padding: 0;
-            margin: 0;
-            text-indent: -9999px;
-            display: none;
-        }
-        h2 {
-            padding: 0;
-            margin: 0;
-        }
-        ul {
-            list-style: none;
-        }
-        p {
-            padding: 0;
-            margin: 0;
-        }
-        a {
-            &:link {
-                text-decoration: none;
-            }
-            &:visited {
-                text-decoration: none;
-            }
-            &:hover {
-                text-decoration: none;
-            }
-        }
-    }
+/* 一括で全ての要素の余白をゼロに指定 */
 
-    .flex {
-        display: flex;
-        flex-wrap: wrap;
-        padding-left: 0;
-        padding-right: 0;
-        margin-left: 0;
-        margin-right: 0;
-    }
-    /* ---------------------------------------- レイアウトに関する指定 */
+* {
+    padding: 0;
+    margin: 0;
 
     html {
-        min-height: 100%;
-        position: relative;
+        font-size: 10px;
+    }
+    div {
+        font-size: 1.8rem;
+    }
+    h1 {
+        font-size: 2.1rem;
+        width: auto;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        display: none;
+        @include logo-img;
+        text-indent: -9999px;
+        border: 1px solid #ff0000; //後で削除
+    }
+    h2 {
+        padding: 5px;
+        margin: 0;
+    }
+    h3 {
+        @include mintyo-style;
+        padding-top: 0;
+        padding: 0 10px 10px;
+    }
+    ul {
+        list-style: none;
+    }
+    dt {
+        font-size: 3.1rem;
+        height: 80px;
+        padding: 10px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    dd {
+        height: 100%;
+        padding: 20px;
+    }
+    p {
+        font-size: 1.4rem;
+        padding: 8px;
+        margin: 0;
+    }
+    a {
+        &:link {
+            text-decoration: none;
+            color: #F8B625;
+        }
+        &:visited {
+            text-decoration: none;
+            color: #F8B625;
+        }
+        &:hover {
+            text-decoration: none;
+            color: #FAED00;
+        }
+    }
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
 
-        body {
-            background-color: #ff0000;
+// ---------------------------------------- レイアウトに関する指定
+
+html {
+    min-height: 100%;
+    position: relative;
+
+    body {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 100px;
+
+        #custom-header {
             width: 100%;
-            height: 100%;
-            margin-bottom: 100px;
-
-            #custom-header {
-                @include nav-footer-bgcolor;
+            height: 120px;
+            margin: 0 auto;
+            #userfont-size {
                 width: 100%;
+                height: 30px;
+            }
+            #custom-nav {
+                width: 98%;
                 height: 90px;
                 margin: 0 auto;
-                border: 1px solid #ff0000; //後で削除
-                h1 {
-                    width: auto;
-                    height: 100%;
-                    @include logo-img;
-                    border: 1px solid #ff0000; //後で削除
-                }
-                #userfont-size {
+                padding: 0 0 20px;
+                .custom-nav-ul {
                     width: 100%;
-                    height: 30%;
-                    border: 1px solid #ff0000; //後で削除
-                }
-
-                #custom-nav {
-                    width: 98%;
-                    height: 70%;
-                    margin: 0 auto;
-                    padding: 0;
-                    border: 1px solid #ff0000; //後で削除
-                    .custom-nav-ul {
-                        width: 100%;
-                        height: 100%;
-                        margin: 0;
-                        display: flex;
-                        justify-content: space-between;
-                        li {
-                            width: 160px;
-                            height: 80%;
-                            display: flex;
-                            margin: auto 0;
-                            align-items: center;
-                            justify-content: center;
-                            border: 1px solid #ff0000; //後で削除
-                        }
-                        .navbar-logo {
-                            width: 300px;
-                            height: 100%;
-                            @include logo-img;
-                        }
-                    }
-                }
-            }
-
-
-            #custom-container {
-                width: 100%;
-                height: 100%;
-                margin: 0 auto;
-                border: 1px solid #ff0000; //後で削除
-                #accordion-space {
-                    width: 90%; // height: 100%;
-                    margin: 20px auto 0;
-                    border: 1px solid #ff0000; //後で削除
-                    #accordion {
-                        width: 95%;
-                        margin: 0 auto; // border: 1px solid #ff0000; //後で削除(accorion)
-                        dt {
-                            height: 80px;
-                            padding: 10px;
-                            margin: 0;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center; // border: 1px solid #ff0000; //後で削除(accorion)
-                        }
-                        dd {
-                            padding: 0;
-                            margin: 10px; // border: 1px solid #ff0000; //後で削除(accorion)
-                            .container {
-                                width: 100%;
-                                .row {
-                                    width: 100%;
-                                    height: 100%;
-                                    margin: 20px auto;
-                                    border: 1px solid #00ff00; //後で削除
-                                    div {
-                                        margin: 0 auto;
-
-                                        .dd-images {
-                                            width: 100%;
-                                            height: 100%;
-                                            margin: 0;
-                                            border: 1px solid #00ff00; //後で削除
-
-                                            .custom-dd-images {
-                                                width: 100%;
-                                                height: 100%;
-                                                border: 1px solid #00ff00; //後で削除
-
-                                                @include custom-slider;
-                                            }
-                                        }
-                                        .dd-contents {
-                                            width: 100%;
-                                            height: 100%;
-                                            margin: 0px;
-                                            border: 1px solid #00ff00; //後で削除
-                                            .custom-dd-contents {
-                                                width: 100%;
-                                                height: 100%;
-                                                border: 1px solid #00ff00; //後で削除
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            #mail-space {
-                width: 100%;
-                height: 100%;
-                margin: 20px auto 100px;
-                border: 1px solid #ff0000; //後で削除
-                #custom-mail-inner {
-                    width: 90%;
                     height: 100%;
-                    padding: 0;
-                    margin: 0 auto;
-                    border: 1px solid #ff0000; //後で削除
-                    #custom-mail-space {
-                        width: 95%;
-                        height: 100%;
-                        margin: 0 auto 20px;
-                        border: 1px solid #00ff00; //後で削除
-                        dl {
-                            margin: 0;
-                            border: 1px solid #00ff00; //後で削除
-                            dt {
-                                height: 80px;
-                                padding: 10px;
-                                text-align: center;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                border: 1px solid #00ff00; //後で削除
-                            }
-                            dd {
-                                height: 100%;
-                                padding: 20px 20px 0;
-                                border: 1px solid #ff0000; //後で削除
-                                .custom-fome {
-                                    width: 100%;
-                                    height: 100%;
-                                    border: 1px solid #ff0000; //後で削除
-                                    display: flex;
-                                    align-items: center;
-                                    form {
-                                        width: 90%;
-                                        margin: 0 auto;
-                                        border: 1px solid #0000ff; //後で削除
-                                        ul {
-                                            width: 100%;
-                                            height: 100%;
-                                            margin: 0 auto;
-                                            border: 1px solid #0000ff; //後で削除
-                                            li {
-                                                width: 100%;
-                                                padding: 5px;
-                                                border: 1px solid #0000ff; //後で削除
-                                                label {
-                                                    margin: 5px;
-                                                    display: block;
-                                                    display: flex;
-                                                    flex-direction: column;
-                                                }
-                                            }
-                                            .message textarea {
-                                                min-height: 250px;
-                                            }
-                                            .submit input {
-                                                width: 100px;
-                                                height: 50px;
-                                                border: 1px solid #0000ff; //後で削除
-                                            }
-                                        }
-                                    }
-                                }
-                            }
+                    &:hover{
+                        font-size: 100%;
+                    }
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    li {
+                        width: 160px;
+                        height: 80%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        a {
+                            width: 100%;
+                            margin: auto 0;
+                            text-align: center;
+                            display: inline-block; // display: flex;
+                            // align-items: center;
+                            // justify-content: center;
                         }
                     }
-                }
-            }
-
-            .label-top {
-                height: 70px;
-                padding-bottom: 20px;
-                margin: 0 auto;
-                border: 1px solid #00ff00; //後で削除
-            }
-
-            #custom-footer {
-                position: absolute;
-                bottom: 0;
-                color: #000000;
-                width: 100%;
-                height: 100px;
-                margin: 0 auto;
-                padding: 20px 0 40px;
-                border: 1px solid #ff0000; //後で削除
-                #custom-footer-inner {
-                    border: 1px solid #ff0000; //後で削除
-                    width: 90%;
-                    margin: 0 auto;
-                }
-            } // 上に戻るボタン
-            #page-top {
-                display: none;
-                position: fixed;
-                right: 30px;
-                bottom: 30px;
-                margin: 0;
-                padding: 0;
-                text-align: center;
-
-                #move-page-top {
-                    color: #333;
-                    text-decoration: none;
-                    display: block;
-                    cursor: pointer;
-                    &:hover {
-                        color: #f00;
+                    .navbar-logo {
+                        width: 300px;
+                        height: 100%;
+                        @include logo-img;
                     }
                 }
             }
         }
+
+        #accordion-space {
+            width: 100%;
+            height: 100%;
+            margin: 80px auto 80px;
+            #accordion {
+                width: 100%;
+                height: 100%;
+                margin: 0 auto;
+            }
+        }
+
+        .custom-inner {
+            width: 90%;
+            height: 100%;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        #mail-space {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto 800px;
+            #mail-accordion {
+                width: 100%;
+                height: 100%;
+                margin: 0 auto;
+            }
+        }
+
+        .label-top {
+            height: 70px;
+            padding: 10px;
+            margin: 0 auto;
+        }
+
+        form {
+            @include mintyo-style;
+            color: #F8B625;
+            width: 100%;
+            margin: 0 auto;
+            ul {
+                width: 100%;
+                height: 100%;
+                margin: 0 auto;
+                li {
+                    width: 100%;
+                    padding: 5px;
+                    label {
+                        margin: 5px;
+                        display: block;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+                .message textarea {
+                    min-height: 250px;
+                }
+                .submit {
+                    text-align: center;
+                    input {
+                        width: 100px;
+                        height: 50px;
+                        color: #727171;
+                    }
+                }
+            }
+        }
+
+
+        #custom-footer {
+            position: absolute;
+            bottom: 0;
+            color: #000000;
+            width: 100%;
+            height: 100px;
+            margin: 0 auto;
+            padding: 20px 0 40px;
+            #custom-footer-inner {
+                text-align: center;
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
     }
+}

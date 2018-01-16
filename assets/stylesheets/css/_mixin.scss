@@ -1,0 +1,48 @@
+@charset "UTF-8";
+//  フォント指定
+$basecolor: #727171;
+@mixin mintyo-style {
+        font-family: "ＭＳ 明朝", serif;
+}
+@mixin vibes-style {
+        font-family: 'Great Vibes', cursive;
+}
+
+//  ロゴ画像・カラー　（カスタム）
+@mixin logo-img {
+    text-indent: -9999px;
+    background: url(../images/logo/mijoselogo.png) center no-repeat;
+    background-size: contain;
+}
+
+// body (color設定)
+@mixin nav-footer-bgcolor {
+    background-color: darken($basecolor, 30%);
+}
+
+@mixin main-bgcolor {
+    background-color: darken($basecolor, 10%);
+}
+
+// contents (color設定)
+@mixin main-inner-bgcolor {
+    background-color: #fff;
+}
+
+// dl-dt-dd (color設定)
+@mixin dt-bgcolor {
+    background: darken($basecolor, 20%);
+}
+
+@mixin dd-bgcolor {
+    background: lighten($basecolor, 30%);
+}
+
+// dl-dt-dd (color設定)
+@mixin form-text-border {
+    border: 1px solid #ff0000;
+}
+
+@mixin form-submit-border {
+    border: 1px solid #00ff00;
+}

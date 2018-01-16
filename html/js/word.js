@@ -27,7 +27,7 @@
             $(this).text('Profile');
         });
 
-        $('.navbar-mail a, .main-mail a').hover(function() {
+        $('.navbar-mail a, .dt-mail a').hover(function() {
             $(this).text('メール');
         }, function() {
             $(this).text('Mail');
